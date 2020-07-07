@@ -1,0 +1,28 @@
+{% extends 'home/base.html' %}
+{% load static %}
+{% block content %}
+    <div class="container home-search">
+        <div>
+            <img src="{% static 'home/img/logo.png' %}" class="search-logo" style="height: 200px; padding-bottom: 30px"
+                 alt="logo">
+            <p class="home-title">Search</p>
+        </div>
+        <form action="{% url 'home-page' %}" method="post">
+            {% csrf_token %}
+            <div class="row">
+                <div class="col-md-10 pb-2">
+                    {{ search_form.search_text }}
+                </div>
+                <div class="col-md-2">
+                    {{ search_form.num_tweets }}
+                </div>
+{#                <div class="col-md-2">#}
+{#                    {{ search_form.from_date }}#}
+{#                </div>#}
+            </div>
+            <div class="pt-2">
+                <button type="submit" class="search-go-button">Go</button>
+            </div>
+        </form>
+    </div>
+{% endblock %}

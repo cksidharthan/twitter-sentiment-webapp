@@ -1,0 +1,15 @@
+{% load static %}
+<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top page-navbar">
+    <a class="navbar-brand mr-4 site-title" href="{% url 'home-page' %}">
+        <img src="{% static 'home/img/logo.png' %}" style="height: 30px" alt="logo">
+        <span style="color: white">Hashtag Health</span>
+    </a>
+    <div class="collapse navbar-collapse" id="navbarToggle">
+        <div class="navbar-nav mr-auto">
+            <a class="nav-item nav-link" href="{% url 'home-page' %}">Home</a>
+        </div>
+        <div class="navbar-nav">
+            <a class="nav-item nav-link" href="{% url 'credits-page' %}">Credits</a>
+        </div>
+    </div>
+</nav>

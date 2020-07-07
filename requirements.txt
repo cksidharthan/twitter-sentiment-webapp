@@ -1,0 +1,12 @@
+Django~=3.0.6
+channels~=2.4.0
+tweepy~=3.8.0
+pandas~=1.0.5
+textblob~=0.15.3
+numpy~=1.18.4
+wordcloud==1.7.0
+plotly~=4.8.2
+matplotlib~=3.2.2
+requests~=2.24.0
+statsmodels~=0.11.1
+channels-redis==3.0.0

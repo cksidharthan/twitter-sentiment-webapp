@@ -1,0 +1,52 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="{% static 'home/core-css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'home/styles.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'home/dashboard-styles.css' %}" type="text/css">
+    <title>Hashtag Health</title>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700">
+    <link rel="stylesheet" href="{% static 'home/vendor/nucleo/css/nucleo.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'home/vendor/@fortawesome/fontawesome-free/css/all.min.css' %}"
+          type="text/css">
+    <link rel="stylesheet" href="{% static 'home/css/argon.css' %}" type="text/css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="https://d3js.org/d3.v4.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/holtzy/D3-graph-gallery@master/LIB/d3.layout.cloud.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+    {% include 'home/navbar.html' %}
+</header>
+
+<div style="margin-top: 1.5%">
+    {% block content %}{% endblock %}
+</div>
+
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+<script src="{% static 'home/vendor/jquery/dist/jquery.min.js' %}"></script>
+<link href=”http://cdn.pydata.org/bokeh/release/bokeh-1.0.4.min.css" rel=”stylesheet” type=”text/css”>
+<link href=”http://cdn.pydata.org/bokeh/release/bokeh-widgets-1.0.4.min.css" rel=”stylesheet” type=”text/css”>
+<script src="{% static 'home/vendor/bootstrap/dist/js/bootstrap.bundle.min.js' %}"></script>
+<script src="{% static 'home/vendor/js-cookie/js.cookie.js' %}"></script>
+<script src="{% static 'home/vendor/jquery.scrollbar/jquery.scrollbar.min.js' %}"></script>
+<script src="{% static 'home/vendor/jquery-scroll-lock/dist/jquery-scrollLock.min.js' %}"></script>
+{{ script | safe }}
+<script src="{% static 'home/js/argon.js' %}"></script>
+</body>
+</html>

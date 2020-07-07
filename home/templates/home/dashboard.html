@@ -1,0 +1,440 @@
+{% extends 'home/base.html' %}
+{% block content %}
+    <div class="main-content" id="panel">
+        <div class="header bg-primary pb-6">
+            <div class="container-fluid">
+                <div class="header-body">
+                    <div class="search-card">
+                        <strong>Current Search Criteria</strong>
+                        <div class="row pt-3">
+                            <div class="col-3">
+                                <div class="card card-stats">
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col">
+                                                <h5 class="card-title text-uppercase text-muted mb-0">Hashtags</h5>
+                                                {% for search_text in search_text_list %}
+                                                    <span class="h2 font-weight-bold mb-0">{{ search_text }}</span>
+                                                {% endfor %}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-3">
+                                <div class="card card-stats">
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col">
+                                                <h5 class="card-title text-uppercase text-muted mb-0">Number of
+                                                    Tweets</h5>
+                                                <span class="h2 font-weight-bold mb-0">{{ total_tweets }}</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xl-3 col-md-6">
+                            <div class="card card-stats">
+                                <!-- Card body -->
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col">
+                                            <h5 class="card-title text-uppercase text-muted mb-0">Total Tweets
+                                                Loaded</h5>
+                                            <span class="h2 font-weight-bold mb-0">
+                                                {{ total_tweets }}
+                                            </span>
+                                        </div>
+                                        <div class="col-auto">
+                                            <div class="icon icon-shape bg-gradient-red text-white rounded-circle shadow">
+                                                <i class="ni ni-active-40"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-md-6">
+                            <div class="card card-stats">
+                                <!-- Card body -->
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col">
+                                            <h5 class="card-title text-uppercase text-muted mb-0">Total Unique
+                                                Users</h5>
+                                            <span class="h2 font-weight-bold mb-0">{{ unique_users }}</span>
+                                        </div>
+                                        <div class="col-auto">
+                                            <div class="icon icon-shape bg-gradient-orange text-white rounded-circle shadow">
+                                                <i class="ni ni-chart-pie-35"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-md-6">
+                            <div class="card card-stats">
+                                <!-- Card body -->
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col">
+                                            <h5 class="card-title text-uppercase text-muted mb-0">Reach</h5>
+                                            <span class="h2 font-weight-bold mb-0">{{ total_reach }}</span>
+                                        </div>
+                                        <div class="col-auto">
+                                            <div class="icon icon-shape bg-gradient-orange text-white rounded-circle shadow">
+                                                <i class="ni ni-chart-pie-35"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-md-6">
+                            <div class="card card-stats">
+                                <!-- Card body -->
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col">
+                                            <h5 class="card-title text-uppercase text-muted mb-0">Total Retweets</h5>
+                                            <span class="h2 font-weight-bold mb-0">{{ total_retweets }}</span>
+                                        </div>
+                                        <div class="col-auto">
+                                            <div class="icon icon-shape bg-gradient-orange text-white rounded-circle shadow">
+                                                <i class="ni ni-chart-pie-35"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-md-6">
+                            <div class="card card-stats">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col">
+                                            <h5 class="card-title text-uppercase text-muted mb-0">Total Favourites</h5>
+                                            <span class="h2 font-weight-bold mb-0">{{ total_favourites }}</span>
+                                        </div>
+                                        <div class="col-auto">
+                                            <div class="icon icon-shape bg-gradient-orange text-white rounded-circle shadow">
+                                                <i class="ni ni-chart-pie-35"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-md-6">
+                            <div class="card card-stats">
+                                <!-- Card body -->
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col">
+                                            <h5 class="card-title text-uppercase text-muted mb-0">Positive</h5>
+                                            <span class="h2 font-weight-bold mb-0">{{ positive_tweets }}</span>
+                                        </div>
+                                        <div class="col-auto">
+                                            <div class="icon icon-shape bg-gradient-orange text-white rounded-circle shadow">
+                                                <i class="ni ni-chart-pie-35"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-md-6">
+                            <div class="card card-stats">
+                                <!-- Card body -->
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col">
+                                            <h5 class="card-title text-uppercase text-muted mb-0">Negative</h5>
+                                            <span class="h2 font-weight-bold mb-0">{{ negative_tweets }}</span>
+                                        </div>
+                                        <div class="col-auto">
+                                            <div class="icon icon-shape bg-gradient-green text-white rounded-circle shadow">
+                                                <i class="ni ni-money-coins"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-md-6">
+                            <div class="card card-stats">
+                                <!-- Card body -->
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col">
+                                            <h5 class="card-title text-uppercase text-muted mb-0">Neutral</h5>
+                                            <span class="h2 font-weight-bold mb-0">{{ neutral_tweets }}</span>
+                                        </div>
+                                        <div class="col-auto">
+                                            <div class="icon icon-shape bg-gradient-info text-white rounded-circle shadow">
+                                                <i class="ni ni-chart-bar-32"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Page content -->
+        <div class="container-fluid mt--6">
+            <div class="row">
+                <div class="col-xl-12 col-md-12">
+                    <div class="card bg-default">
+                        <div class="card-header bg-transparent">
+                            <div class="row align-items-center">
+                                <div class="col">
+                                    <h6 class="text-light text-uppercase ls-1 mb-1">Overview</h6>
+                                    <h5 class="h3 text-white mb-0">Tweet Timeline Graph</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-5">
+                            {% autoescape off %}
+                                {{ tweet_timeline_graph | safe }}
+                            {% endautoescape %}
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-12 col-md-12">
+                    <div class="card bg-default">
+                        <div class="card-header bg-transparent">
+                            <div class="row align-items-center">
+                                <div class="col">
+                                    <h6 class="text-light text-uppercase ls-1 mb-1">Overview</h6>
+                                    <h5 class="h3 text-white mb-0">Sentiment Timeline Graph</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-5">
+                            {% autoescape off %}
+                                {{ sentiment_timeline | safe }}
+                            {% endautoescape %}
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4">
+                    <div class="card">
+                        <div style="background-color: saddlebrown" class="card-header border-0">
+                            <div style="color: white" class="row align-items-center">
+                                <div class="col">
+                                    <h3 style="color: white" class="mb-0">Wordcloud</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <img style="margin: 20px 0;" src="data:image/png;base64,{{ tweet_text_cloud }}" alt=""/>
+                    </div>
+                </div>
+                <div class="col-xl-4">
+                    <div class="card">
+                        <div style="background-color: saddlebrown" class="card-header border-0">
+                            <div class="row align-items-center">
+                                <div class="col">
+                                    <h3 style="color: white" class="mb-0">Top source of Tweets</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="container pb-5">
+                            <canvas style="margin: 50px 0;" id="source-pie-chart"></canvas>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4">
+                    <div class="card">
+                        <div style="background-color: saddlebrown" class="card-header border-0">
+                            <div class="row align-items-center">
+                                <div class="col">
+                                    <h3 style="color: white" class="mb-0">Hashtag Cloud</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <img style="margin: 20px 0;" src="data:image/png;base64,{{ hashtag_cloud }}" alt=""/>
+                    </div>
+                </div>
+                <div class="col-xl-4">
+                    <div class="card">
+                        <div style="background-color: saddlebrown" class="card-header border-0">
+                            <div class="row align-items-center">
+                                <div class="col">
+                                    <h3 style="color: white" class="mb-0">Sentiment Count Breakdown</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="container pb-5">
+                            <canvas style="margin: 50px 0;" id="pie-chart"></canvas>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4">
+                    <div class="card">
+                        <div style="background-color: saddlebrown" class="card-header border-0">
+                            <div class="row align-items-center">
+                                <div class="col">
+                                    <h3 style="color: white" class="mb-0">Weekly Breakdown</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="container pb-5">
+                            <canvas style="margin: 50px 0;" id="weekly-breakdown"></canvas>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4">
+                    <div class="card">
+                        <div style="background-color: saddlebrown" class="card-header border-0">
+                            <div class="row align-items-center">
+                                <div class="col">
+                                    <h3 style="color: white" class="mb-0">Top Users</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <img style="margin: 20px 0;" src="data:image/png;base64,{{ tweet_screenname_cloud }}" alt=""/>
+                    </div>
+                </div>
+                <div class="col-xl-12 col-md-12">
+                    <div class="card">
+                        <div style="background-color: saddlebrown" class="card-header border-0">
+                            <div class="row align-items-center">
+                                <div class="col">
+                                    <h3 style="color: white" class="mb-0">Geographical Sentiment</h3>
+                                    <h5 style="color: white">Only the top 10 Places will be plotted (to reduce the load on google geocode api)</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-3">
+                            {% autoescape off %}
+                                {{ tweet_location_map | safe }}
+                            {% endautoescape %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+        // Pie chart
+        pie_data = {
+            datasets: [{
+                data: {{ sentiment_values | safe }},
+                backgroundColor: ["#348ceb", "#85f2a6", "#31a855", "#018529", "#f7da63", "#b84e07", "red"]
+            }],
+            labels: {{ sentiment_keys | safe }}
+        };
+
+        pie_options = {
+            responsive: true,
+            aspectRatio: 1.5,
+            legend: {
+                display: true,
+                position: 'right',
+                labels: {
+                    fontColor: 'black'
+                }
+            },
+        }
+
+        var pie_ctx = document.getElementById('pie-chart').getContext('2d');
+
+        var myPieChart = new Chart(pie_ctx, {
+            type: 'pie',
+            data: pie_data,
+            options: pie_options
+        });
+
+        // Tweets by Source Pie chart
+        source_pie_data = {
+            datasets: [{
+                data: {{ tweet_source_values | safe }},
+                backgroundColor: ["#348ceb", "#85f2a6", "#31a855", "#018529", "#f7da63", "#b84e07"]
+            }],
+
+            labels: {{ tweet_source_keys | safe}}
+        };
+
+        source_pie_options = {
+            responsive: true,
+            aspectRatio: 1.5,
+            legend: {
+                display: true,
+                position: 'right',
+                labels: {
+                    fontColor: 'black'
+                }
+            },
+        }
+
+        var source_pie_ctx = document.getElementById('source-pie-chart').getContext('2d');
+
+        var SourcePieChart = new Chart(source_pie_ctx, {
+            type: 'pie',
+            data: source_pie_data,
+            options: source_pie_options
+        });
+
+        // bar chart week tweet count
+        var bar_ctx = document.getElementById("weekly-breakdown");
+        var myChart = new Chart(bar_ctx, {
+            type: 'bar',
+            data: {
+                labels: {{ weekly_breakdown_keys | safe }},
+                datasets: [{
+                    data: {{ weekly_breakdown_values | safe }},
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.2)',
+                        'rgba(54, 162, 235, 0.2)',
+                        'rgba(255, 206, 86, 0.2)',
+                        'rgba(75, 192, 192, 0.2)',
+                        'rgba(153, 102, 255, 0.2)',
+                        'rgba(255, 159, 64, 0.2)',
+                        'rgba(255, 99, 132, 0.2)',
+                    ],
+                    borderColor: [
+                        'rgba(255,99,132,1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 206, 86, 1)',
+                        'rgba(75, 192, 192, 1)',
+                        'rgba(153, 102, 255, 1)',
+                        'rgba(255, 159, 64, 1)',
+                        'rgba(255,99,132,1)'
+                    ],
+                    borderWidth: 1,
+                }]
+            },
+            options: {
+                aspectRatio: 1.5,
+                responsive: true,
+                scales: {
+                    xAxes: [{
+                        ticks: {
+                            maxRotation: 90,
+                            minRotation: 90
+                        }
+                    }],
+                    yAxes: [{
+                        ticks: {
+                            beginAtZero: true
+                        }
+                    }]
+                },
+                legend: {
+                    display: false,
+                },
+            }
+        });
+
+    </script>
+{% endblock %}
