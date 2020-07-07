@@ -11,5 +11,4 @@ requests~=2.24.0
 statsmodels~=0.11.1
 channels-redis==3.0.0
 gunicorn==20.0.4
-psycopg2==2.6.1
 whitenoise==5.0.1
