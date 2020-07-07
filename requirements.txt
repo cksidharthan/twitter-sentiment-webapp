@@ -12,3 +12,5 @@ statsmodels~=0.11.1
 channels-redis==3.0.0
 gunicorn==20.0.4
 whitenoise==5.0.1
+psycopg2==2.8.5
+django-heroku==0.3.1
