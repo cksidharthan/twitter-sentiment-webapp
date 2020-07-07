@@ -1,13 +1,36 @@
-=========================================================
-* Argon Dashboard - v1.2.0
-=========================================================
+{% extends 'home/base.html' %}
+{% load static %}
+{% block content %}
 
-* Product Page: https://www.creative-tim.com/product/argon-dashboard
-* Copyright 2020 Creative Tim (https://www.creative-tim.com)
-* Licensed under MIT (https://github.com/creativetimofficial/argon-dashboard/blob/master/LICENSE.md)
+    <div class="main-content" id="panel">
+        <div class="header bg-primary pb-6">
+            <div class="container-fluid">
+                <div class="header-body">
+                    <div class="search-card">
+                        <strong>Current Search Criteria</strong>
+                        <div class="row pt-3">
+                            <div class="col-3">
+                                <div class="card card-stats">
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col">
+                                                <h5 class="card-title text-uppercase text-muted mb-0">Dashboard Template</h5>
+                                                <h6>Argon Dashboard - v1.2.0</h6>
+                                                <p>* Product Page: https://www.creative-tim.com/product/argon-dashboard</p>
+                                                <p>* Copyright 2020 Creative Tim (https://www.creative-tim.com)</p>
+                                                <p>* Licensed under MIT
+                                                    (https://github.com/creativetimofficial/argon-dashboard/blob/master/LICENSE.md)</p>
+                                                <p>* Coded by www.creative-tim.com</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-* Coded by www.creative-tim.com
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+{% endblock %}
