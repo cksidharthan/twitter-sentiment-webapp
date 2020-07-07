@@ -19,9 +19,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['project-hashtag-health.herokuapp.com']
+ALLOWED_HOSTS = ['twitter-sentiment-webapp.herokuapp.com', '127.0.0.1']
 
 
 # Application definition
@@ -31,12 +31,12 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.staticfiles',
     'home',
-    'herokuapp'
+    'herokuapp',
 ]
 
 MIDDLEWARE = [
-    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -98,15 +98,5 @@ ACCESS_SECRET = os.environ.get('ACCESS_SECRET')
 GOOGLE_GEOCODE_API_URL = os.environ.get('GOOGLE_GEOCODE_API_URL')
 GOOGLE_MAPS_API_KEY = os.environ.get('GOOGLE_MAPS_API_KEY')
 
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/1.11/howto/static-files/
-PROJECT_ROOT   =   os.path.join(os.path.abspath(__file__))
-STATIC_ROOT  =   os.path.join(PROJECT_ROOT, 'staticfiles')
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
-# Extra lookup directories for collectstatic to find static files
-STATICFILES_DIRS = (
-    os.path.join(PROJECT_ROOT, 'static'),
-)
-
-#  Add configuration for static files storage using whitenoise
-STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'

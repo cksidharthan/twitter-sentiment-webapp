@@ -1,1 +1,1 @@
-web: gunicorn twitter-sentiment-webapp.wsgi --log-file -
+web: gunicorn twitter_sentiment_webapp.wsgi --log-file -
