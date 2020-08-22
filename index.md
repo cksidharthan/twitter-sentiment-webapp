@@ -12,11 +12,11 @@ Django Webapplication that gets data from Twitter Developer API and processes th
 To view the demo of working application -- [Click me](https://twitter-sentiment-webapp.herokuapp.com)
 
 ## Search Page Demo
-![Image](src)
+![Image](https://github.com/cksidharthan/twitter-sentiment-webapp/blob/gh-pages/home_page.png)
 
 
 # Dashboard Result Page Demo
-![Image](src)
+![Image](https://github.com/cksidharthan/twitter-sentiment-webapp/blob/gh-pages/dashboard-page.png)
 
 
 ### Markdown
