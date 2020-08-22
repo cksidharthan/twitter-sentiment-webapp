@@ -1,3 +1,4 @@
 theme: jekyll-theme-hacker
 name: Twitter Sentiment Analytics
-title: null
+title: Twitter Sentiment Webapp
+description: Webapp to analyse the sentiment for hashtags and @ mentions
