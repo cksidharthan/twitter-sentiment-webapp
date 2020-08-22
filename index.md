@@ -34,9 +34,9 @@ To view the demo of working application -- [Click me](https://twitter-sentiment-
 If you have any ideas to optimize or add additional features do raise a pull request. I'll be happy to add them to the codebase :)
 
 ## Search Page Demo
-![Image](./home_page.png)
+![Image](https://raw.githubusercontent.com/cksidharthan/twitter-sentiment-webapp/gh-pages/home_page.png)
 
 
 # Dashboard Result Page Demo
-![Image](./dashboard-page.png)
+![Image](https://raw.githubusercontent.com/cksidharthan/twitter-sentiment-webapp/gh-pages/dashboard-page.png)
 
