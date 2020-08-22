@@ -1,8 +1,23 @@
-## Welcome to GitHub Pages
+## Twitter Sentiment Webapp
 
-You can use the [editor on GitHub](https://github.com/cksidharthan/twitter-sentiment-webapp/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+Django Webapplication that gets data from Twitter Developer API and processes the data and populates KPI dashboards.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+### Techstack
+- Python
+- Django Framework
+- Google Maps API
+- Plotly
+- Chartjs
+
+To view the demo of working application -- [Click me](https://twitter-sentiment-webapp.herokuapp.com)
+
+## Search Page Demo
+![Image](src)
+
+
+# Dashboard Result Page Demo
+![Image](src)
+
 
 ### Markdown
 
