@@ -1,6 +1,6 @@
 ## Twitter Sentiment Webapp
 
-Django Webapplication that gets data from Twitter Developer API and processes the data and populates KPI dashboards.
+Django Web application that gets data from Twitter Developer API and processes the data and populates KPI dashboards.
 
 ### Techstack
 - Python
@@ -36,7 +36,7 @@ Open http://localhost:8000 in a browser
 ## Contact 
 If you have any ideas to optimize or add additional features do raise a pull request. I'll be happy to add them to the codebase :)
 
-## Search Page Demo
+# Search Page Demo
 ![Image](https://raw.githubusercontent.com/cksidharthan/twitter-sentiment-webapp/gh-pages/home_page.png)
 
 
