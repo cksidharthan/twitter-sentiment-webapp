@@ -26,9 +26,12 @@ To view the demo of working application -- [Click me](https://twitter-sentiment-
   >>> python manage.py makemigrations
   >>> python manage.py migrate
   >>> python manage.py createsuperuser
-  _Create a super user using your credentails_
+           Create a super user using your credentails
   >>> python manage.py runserver
   ```
+```
+Open http://localhost:8000 in a browser
+```
   
 ## Contact 
 If you have any ideas to optimize or add additional features do raise a pull request. I'll be happy to add them to the codebase :)
